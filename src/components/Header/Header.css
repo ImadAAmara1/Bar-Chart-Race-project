@@ -1,0 +1,70 @@
+/* components/Header/Header.css */
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-title {
+  font-size: 2.5em;
+  margin: 20px 0 10px 0;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-description {
+  max-width: 800px;
+  margin-inline: auto;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.header-features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  font-size: 0.9em;
+}
+
+.feature-icon {
+  font-size: 1.2em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 30px 0;
+  }
+
+  .main-title {
+    font-size: 2em;
+  }
+
+  .main-subtitle {
+    font-size: 1.1em;
+  }
+
+  .header-features {
+    gap: 15px;
+  }
+
+  .feature {
+    padding: 8px 12px;
+    font-size: 0.8em;
+  }
+}

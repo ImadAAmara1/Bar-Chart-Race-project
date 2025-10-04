@@ -1,0 +1,279 @@
+/* styles/chart.css */
+.chart-container {
+  font-family: "Arial, sans-serif";
+  max-width: 1200px;
+  margin: 0;
+  padding: 20px;
+}
+
+.chart-controls {
+  margin-bottom: 5px;
+  padding: 0;
+  margin-left: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.control-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+.control-btn.play-pause {
+  background-color: #3498db;
+}
+
+.control-btn.reset {
+  background-color: #e74c3c;
+}
+
+.control-btn:hover {
+  opacity: 0.9;
+}
+
+.control-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.year-slider {
+  width: 200px;
+}
+
+.chart-content {
+  display: flex;
+  gap: 20px;
+}
+
+.chart-visualization {
+  flex: 1;
+}
+
+.bar-chart-svg {
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.year-background {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.chart-sidebar {
+  width: 200px;
+}
+
+.chart-legend {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.legend-title {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 3.4px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.legend-item:hover {
+  background-color: #f8f9fa;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.legend-label {
+  font-size: 12px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.chart-tooltip {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  pointer-events: none;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-100%);
+}
+
+.tooltip-header {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.tooltip-content div {
+  margin-bottom: 2px;
+}
+
+.chart-loading,
+.chart-error,
+.chart-no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.chart-loading {
+  color: #666;
+  background-color: #f8f9fa;
+}
+
+.chart-error {
+  color: #e74c3c;
+  background-color: #fdedec;
+}
+
+.chart-no-data {
+  color: #666;
+  background-color: #f8f9fa;
+}
+
+/* Ajoutez ceci à votre chart.css */
+.control-btn.play-pause.completed {
+  background-color: #27ae60;
+}
+
+.control-btn.play-pause.completed:hover {
+  background-color: #219653;
+}
+
+.completion-indicator {
+  background: #27ae60;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(39, 174, 96, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(39, 174, 96, 0);
+  }
+}
+
+.year-complete {
+  color: #27ae60;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.chart-controls {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.control-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.control-btn.play-pause {
+  background-color: #3498db;
+}
+
+.control-btn.reset {
+  background-color: #e74c3c;
+}
+
+.control-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.control-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.year-slider {
+  width: 200px;
+}
+
+/* Ajoutez ceci à votre chart.css */
+.bar-chart-svg {
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: visible; /* Permet aux animations de dépasser légèrement */
+}
+
+/* Style pour les nouvelles barres pendant l'animation */
+rect {
+  transition: opacity 0.3s ease;
+}
+
+.name-label,
+.value-label {
+  transition: opacity 0.3s ease;
+}
