@@ -10,7 +10,7 @@ export function useCSVData() {
     async function loadData() {
       try {
         setLoading(true);
-        const rows = await d3.csv("/data/category-brands.csv");
+        const rows = await d3.csv("./category-brands.csv");
 
         const processed = rows.map((row) => ({
           date: row.date,
