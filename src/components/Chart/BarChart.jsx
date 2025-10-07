@@ -1,4 +1,3 @@
-// components/Chart/BarChart.jsx (Version alternative)
 import * as d3 from "d3";
 import { useEffect, useRef } from "react";
 import { createScales } from "../../utils/chartScales";
@@ -26,7 +25,7 @@ export function BarChart({
   useEffect(() => {
     if (!currentYearData.length || !xScale || !yScale || !colorScale) return;
 
-    const t = d3.transition().duration(800).ease(d3.easeCubicOut);
+    const t = d3.transition().duration(1000).ease(d3.easeCubicOut);
     const g = d3.select(gRef.current);
 
     // Déterminer l'ordre précédent pour l'animation

@@ -1,4 +1,3 @@
-// components/Chart/Controls.jsx
 export function Controls({
   currentYear,
   years,
@@ -8,11 +7,6 @@ export function Controls({
   onReset,
   onYearChange,
 }) {
-  const currentYearNumber = parseInt(currentYear.slice(0, 4));
-  const lastYearNumber = parseInt(
-    years[years.length - 1]?.slice(0, 4) || "2019"
-  );
-
   return (
     <div className="chart-controls">
       <div className="control-group">
@@ -23,7 +17,7 @@ export function Controls({
           }`}
         >
           {hasCompletedAnimation
-            ? "🔄 Recommencer"
+            ? "▶ Lecture"
             : isPlaying
             ? "⏸ Pause"
             : "▶ Lecture"}
@@ -31,18 +25,11 @@ export function Controls({
         <button onClick={onReset} className="control-btn reset">
           ⏹ Reset
         </button>
-
-        {hasCompletedAnimation && (
-          <span className="completion-indicator">✓ Animation terminée</span>
-        )}
       </div>
 
       <div className="control-group">
         <label className="control-label">
           Année: <strong>{currentYear.slice(0, 4)}</strong>
-          {currentYearNumber === lastYearNumber && hasCompletedAnimation && (
-            <span className="year-complete"> ✓</span>
-          )}
         </label>
         <input
           type="range"

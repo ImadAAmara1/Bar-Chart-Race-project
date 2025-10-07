@@ -1,4 +1,3 @@
-// components/Chart/Chart.jsx
 import { useEffect } from "react";
 import { useChartData } from "../../hooks/useChartData";
 import { BarChart } from "./BarChart";
@@ -14,7 +13,7 @@ export function Chart() {
   const h = 600;
   const innerWidth = w - margin.left - margin.right;
   const innerHeight = h - margin.top - margin.bottom;
-  const animationSpeed = 800;
+  const animationSpeed = 1000;
 
   // Hook personnalisé pour la logique métier
   const {

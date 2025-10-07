@@ -1,4 +1,3 @@
-// components/Chart/Legend.jsx
 export function Legend({ categories, colorScale, onCategoryHover }) {
   // Vérifier que colorScale existe
   if (!colorScale) return null;

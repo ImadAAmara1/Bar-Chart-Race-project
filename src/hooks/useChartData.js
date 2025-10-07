@@ -1,4 +1,3 @@
-// hooks/useChartData.js
 import { useState, useMemo } from "react";
 import { useCSVData } from "./useCSVData";
 import * as d3 from "d3";

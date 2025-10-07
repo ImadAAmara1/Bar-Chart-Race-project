@@ -1,10 +1,9 @@
-// hooks/useCSVData.js
 import { useEffect, useState } from "react";
 import * as d3 from "d3";
 
 export function useCSVData() {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true); // Commencer à true
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -17,7 +16,7 @@ export function useCSVData() {
           date: row.date,
           name: row.name,
           category: row.category,
-          value: +row.value, // IMPORTANT: Conversion en number
+          value: +row.value,
         }));
 
         setData(processed);

@@ -1,4 +1,3 @@
-// components/Chart/index.js
 export { Chart } from "./Chart";
 export { Controls } from "./Controls";
 export { Legend } from "./Legend";

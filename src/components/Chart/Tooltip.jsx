@@ -1,4 +1,3 @@
-// components/Chart/Tooltip.jsx
 import * as d3 from "d3";
 
 export function Tooltip({ hoveredItem, currentYear, currentYearData }) {

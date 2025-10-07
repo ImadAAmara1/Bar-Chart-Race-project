@@ -1,9 +1,7 @@
-// App.jsx
 import { Chart } from "./components/Chart/Chart";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 
-import { useChartData } from "./hooks/useChartData";
 import "./App.css";
 
 function App() {
